@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>show player</title>
+  </head>
+  <body>
+    <div class="comtainer">
+        
+    <h3>show player</h3>
+    <div class="formbg-outer">
+    <div class="formbg_new">
+      <div class="formbg-inner padding-horizontal--48">
+        <form id="stripe-login">
+          <small class="text-danger">{{msg}}</small>
+          <div>
+            <label for="playerName" style="margin-right:50px;">player name</label>
+            <input type="text" id="playerName" placeholder="enter player name" name="playerName" #playerName style="margin-right:50px;">
+            <input type="submit" (click)="showPlayer(playerName.value)" value="showPlayer"/>
+          </div>
+        </form>
+      </div>
+    </div>
+   </div>
+    </div>
+   <div class="formbg_new">
+    <table> 
+      <tr>
+      <th>Id</th>
+      <th>Player Name</th>
+      <th>Player Bidding Budget</th>
+      <th>Player Team Name</th>
+      </tr>
+      <tr *ngFor="let players of players">
+        <td>{{players.playerId}}</td>
+        <td>{{players.playerName}}</td>
+        <td>{{players.playerBiddingBudget}}</td>
+        <td>{{players.playerTeamName}}</td>
+      </tr>
+    </table>
+     
+   </div>
+  </body>
+</html>

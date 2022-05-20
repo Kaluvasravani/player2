@@ -1,0 +1,52 @@
+<p>registration works!</p>
+<div class="bk">
+<div class="container">
+    <h2>User registration</h2>
+    <form (ngSubmit)="registerUser()">
+      <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="userName">userName:</label>
+        <input type="userName" class="form-control" id="userName" placeholder="Enter userName" name="userName" [(ngModel)]="user.userName" required >
+      </div>
+
+      <div class="form-group">
+        <label for="age">age:</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter age" name="age"  required [(ngModel)]="user.age"  >
+      </div>
+
+      <div class="form-group">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="female"  [(ngModel)]="user.gender" required>
+          <label class="form-check-input" for="flexRadioDefault1">female</label>
+      </div>
+      <div class="form-group">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="male"  [(ngModel)]="user.gender" required>
+        <label class="form-check-input" for="flexRadioDefault2">male</label>
+      </div>
+
+      <div class="custom-control custom-checkbox" [(ngModel)]="user.hobbies">
+         <h4>select hobbies</h4>
+         <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input" checked>
+         <label class="custom-check-label" for="customCheckbox">reading</label>
+      </div>
+      <div class="custom-control custom-checkbox" >
+        <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input">
+        <label class="custom-check-label" for="customCheckbox">writting</label>
+     </div>
+     <div class="custom-control custom-checkbox" >
+        <input type="checkbox" id="customCheckbox2" name="customCheck" class="custom-control-input">
+        <label class="custom-check-label" for="customCheckbox">sleeping</label>
+     </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password" 
+        [(ngModel)]="user.password"  required>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      <button  type="submit" class="btn btn-info">Register</button>
+    </form>
+  </div>
+</div>
+  

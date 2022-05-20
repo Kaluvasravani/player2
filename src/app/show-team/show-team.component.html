@@ -1,0 +1,27 @@
+<p>show-team works!</p>
+<div>
+    <label for="teamName">Teams</label>
+    <div class="input-group input-group-sm-mb-3">
+      <select #playerTeamName style="margin: right 40px;">
+        <option value="0">--select teamname--</option>
+        <option *ngFor="let team of teams" [value]="team">{{team}}</option>
+        <option value="1">NA</option>
+  
+      </select>
+      <button (click)="showTeam(playerTeamName.value)" class="btn btn-info" >show Team</button>
+      <table class="table"> 
+        <tr>
+        <th>Id</th>
+        <th>Player Name</th>
+        <th>Player Bidding Budget</th>
+        <th>Player Team Name</th>
+        </tr>
+        <tr *ngFor="let players of players">
+          <td>{{players.playerId}}</td>
+          <td>{{players.playerName}}</td>
+          <td>{{players.playerBiddingBudget}}</td>
+          <td>{{players.playerTeamName}}</td>
+        </tr>
+      </table>
+    </div>
+</div>  

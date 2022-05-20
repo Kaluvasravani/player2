@@ -1,0 +1,38 @@
+.bk{
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-color: blueviolet; 
+      
+}
+.container
+{ 
+   margin: auto;
+   width: 40%;
+   border:3px red;
+   padding: 10px;   
+}
+.headline
+{
+    color: blue;
+    font-weight: bolder;
+    margin-top: 78px;
+}
+.form-group
+{
+    color: orange;
+}
+
+.checkbox
+{
+    color: orange;
+}
+
+.right
+{
+    color: red;
+  
+    float: right;
+    
+}
